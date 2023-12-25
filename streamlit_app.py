@@ -9,8 +9,7 @@ import pytesseract
 
 # Streamlit app
 st.subheader('Vision Mate')
-st.selectbox("Input type", ("URL", "Image"))
-st.file_uploader("Upload Image", type=["jpg", "jpeg", "png"])
+
 # Get OpenAI API key and input type
 with st.sidebar:
     openai_api_key = st.text_input("Genini API key", value="", type="password")
