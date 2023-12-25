@@ -5,7 +5,7 @@ from langchain.chains.summarize import load_summarize_chain
 from langchain.prompts import PromptTemplate
 
 # Streamlit app
-st.subheader('VisionMate')
+st.subheader('Vision Mate')
 
 # Get OpenAI API key and URL to be summarized
 with st.sidebar:
