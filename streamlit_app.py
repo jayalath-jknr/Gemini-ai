@@ -14,7 +14,8 @@ st.subheader('Vision Mate')
 with st.sidebar:
     openai_api_key = st.text_input("Gemini API key", value="", type="password")
     st.caption("*If you don't have an OpenAI API key, get it [here]().*")
-    model = st.selectbox("OpenAI chat model", ("gpt-3.5-turbo", "gpt-3.5-turbo-16k"))
+    model = genai.GenerativeModel('gemini-pro-vision')
+    # model = st.selectbox("OpenAI chat model", ("gpt-3.5-turbo", "gpt-3.5-turbo-16k"))
     st.caption("*If the article is long, choose gpt-3.5-turbo-16k.*")
     input_type = st.selectbox("Input type", ("URL", "Image"))
 
