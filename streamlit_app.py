@@ -9,17 +9,18 @@ import pytesseract
 
 # Streamlit app
 st.subheader('Vision Mate')
+st.selectbox("Input type", ("URL", "Image"))
 st.file_uploader("Upload Image", type=["jpg", "jpeg", "png"])
 # Get OpenAI API key and input type
 with st.sidebar:
-    openai_api_key = st.text_input("OpenAI API key", value="", type="password")
-    st.caption("*If you don't have an OpenAI API key, get it [here](https://platform.openai.com/account/api-keys).*")
+    openai_api_key = st.text_input("Genini API key", value="", type="password")
+    st.caption("*If you don't have an OpenAI API key, get it [here]().*")
     model = st.selectbox("OpenAI chat model", ("gpt-3.5-turbo", "gpt-3.5-turbo-16k"))
     st.caption("*If the article is long, choose gpt-3.5-turbo-16k.*")
     input_type = st.selectbox("Input type", ("URL", "Image"))
 
 # If 'Summarize' button is clicked
-if st.button("Summarize"):
+if st.button("Describe"):
     # Validate inputs
     if not openai_api_key.strip():
         st.error("Please provide the OpenAI API key.")
