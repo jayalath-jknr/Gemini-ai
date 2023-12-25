@@ -6,6 +6,7 @@ from langchain.document_loaders import UnstructuredURLLoader, UnstructuredImageL
 from langchain.chains.summarize import load_summarize_chain
 from langchain.prompts import PromptTemplate
 import pytesseract
+import google.generativeai as genai
 
 # Streamlit app
 st.subheader('Vision Mate')
