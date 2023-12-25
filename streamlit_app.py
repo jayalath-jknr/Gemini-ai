@@ -9,14 +9,14 @@ st.subheader('Vision Mate')
 
 # Get OpenAI API key and URL to be summarized
 with st.sidebar:
-    openai_api_key = st.text_input("OpenAI API key", value="", type="password")
-    st.caption("*If you don't have an OpenAI API key, get it [here](https://platform.openai.com/account/api-keys).*")
-    model = st.selectbox("OpenAI chat model", ("gpt-3.5-turbo", "gpt-3.5-turbo-16k"))
-    st.caption("*If the article is long, choose gpt-3.5-turbo-16k.*")
+    openai_api_key = st.text_input("Gemini AI API key", value="", type="password")
+    st.caption("*If you don't have an Gemini AI API key, get it [here]().*")
+    model = st.selectbox("Gemini AI chat model", ("gpt-3.5-turbo", "gpt-3.5-turbo-16k"))
+    # st.caption("*If the article is long, choose gpt-3.5-turbo-16k.*")
 url = st.text_input("URL", label_visibility="collapsed")
 
 # If 'Summarize' button is clicked
-if st.button("Summarize"):
+if st.button("Describe"):
     # Validate inputs
     if not openai_api_key.strip() or not url.strip():
         st.error("Please provide the missing fields.")
